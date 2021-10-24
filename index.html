@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD API REST F   ETCH</title>
+    <style>
+      
+      body {
+        background-image: url(/TP2-LABORATORIO/img/fondo.jpg);
+      }
+      h1 {
+        text-align: center;
+      }
+      .nombre1{
+        background-color: whitesmoke;
+        font-weight: 700;
+        font-size: larger;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        border-spacing: 500px 10px;
+      }
+      .apellido1{
+        background-color: whitesmoke;
+        font-weight: 700;
+        font-size: larger;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        border-spacing: 500px 10px;
+      }
+      .localidad1{
+        background-color: whitesmoke;
+        font-weight: 700;
+        font-size: larger;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        border-spacing: 500px 10px;
+      }
+
+      .enviar {
+        padding: 12px 16px;
+        cursor: pointer;
+        border-width: 1px;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 400;
+        -webkit-box-shadow: 0 10px 20px -6px rgb(0 0 0 / 12%);
+        -moz-box-shadow: 0 10px 20px -6px rgba(0,0,0,.12);
+        box-shadow: 0 10px 20px -6px rgb(0 0 0 / 12%);
+        position: relative;
+        margin-bottom: 20px;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+        background: #287233;
+        border-color: #287233;
+        color: #fff;
+      }
+      .input {
+        height: 52px;
+        background: #fff;
+        color: #000;
+        font-size: 14px;
+        border-radius: 2px;
+        -webkit-box-shadow: none!important;
+        box-shadow: none!important;
+        border: 1px solid rgba(0,0,0,.1);
+        margin-bottom: 10px;
+      }
+
+    </style>
+
+    
+  </head>
+
+  <body>
+    <h1>Carrera Anual</h1>
+    <section class="crud">
+
+      <article>
+        <h2 class="crud-title">Agregar tus datos para registrarte</h2>
+        <form class="crud-form">
+          <input type="text" name="nombre" placeholder="nombre" required class="nombre1">
+          <br>
+          <input type="text" name="apellido" placeholder="apellido" required class="apellido1">
+          <br>
+          <input type="text" name="localidad" placeholder="localidad" required class="localidad1">
+          <br>
+          <input type="submit" value="Enviar" class="enviar">
+          <input type="hidden" name="id">
+        </form>
+      </article>
+
+
+      <article>
+        <h2>Concursantes ingresados</h2>
+        <table class="crud-table">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Localidad</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+
+          <tbody class="tbody"></tbody>
+          
+          
+        </table>
+      </article>
+
+
+    </section>
+    <template id="crud-template">
+      <tr>
+        <td class="nombre"></td>
+        <td class="apellido"></td>
+        <td class="localidad"></td>
+        <td>
+          <button class="edit">Editar</button>
+          <button class="delete">Eliminar</button>
+        </td>
+      </tr>
+    </template>
+
+    
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"> </script>
+    
+    <script src="./server.js"></script>
+    
+  </body>
+
+
+
+</html>

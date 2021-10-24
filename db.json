@@ -1,0 +1,18 @@
+{
+  "personas": [
+    {
+      "id": 2,
+      "nombre": "Enzo",
+      "apellido": "Roh",
+      "localidad": "Villa Elisa"
+      
+    },
+    {
+      "id": 3,
+      "nombre": "Julian",
+      "apellido": "Galeano",
+      "localidad": "Villa Elisa"
+      
+    }
+  ]
+}
